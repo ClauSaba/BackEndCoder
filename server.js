@@ -1,20 +1,16 @@
-const express = require("express");
-const db = require("./contenedor.js")
-const app = express()
+const { urlencoded } = require('express');
+const express =  require ('express');
+const app = express();
+const productosRouter = require('./productos')
 
-const DB = new db("data")
+app.use(express.json())
+app.use(urlencoded({ extended: true }))
 
-app.get("/productos",async (req, res)=>{
-    const data = await DB.getAll()
-    res.send(data);
+app.use('/api/productos', productosRouter)
+
+app.use(express.static('datos'))
+
+const server = app.listen(8080, ()=>{
+    console.log(`server iniciado en puerto ${server.address().port}`)
 })
-
-app.get("/productoRandom",async (req, res)=>{
-    let numeroAzar = Math.floor(Math.random()*3+1)
-    const data = await DB.getById(numeroAzar)
-    res.send(data);
-})
-
-app.listen(8080,()=>{
-    console.log(`Servidor iniciado en el puerto 8080` );
-})
+server.on('error', error => console.log(`${error}`))
