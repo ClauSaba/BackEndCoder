@@ -1,3 +1,0 @@
-[{"title":"teclado","price":100,"thumbnail":"http://teclado.com/image.jpg","id":1},
-{"title":"raton","price":200,"thumbnail":"http://raton.com/image.jpg","id":2},
-{"title":"pantalla","price":300,"thumbnail":"http://pantalla.com/image.jpg","id":3}]

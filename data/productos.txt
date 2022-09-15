@@ -1,0 +1,4 @@
+[{"title":"teclado","price":149,"thumbnail":"https://cdn1.iconfinder.com/data/icons/Futurosoft%20Icons%200.5.2/128x128/devices/keyboard.png","id":1},
+{"title":"raton","price":99,"thumbnail":"https://cdn1.iconfinder.com/data/icons/Futurosoft%20Icons%200.5.2/128x128/apps/kmousetool.png","id":2},
+{"title":"pantalla","price":300,"thumbnail":"https://cdn3.iconfinder.com/data/icons/camill-icons/256/camill_displaywide.png","id":3},
+{"title":"Lapiz","price":"36","thumbnail":"https://cdn4.iconfinder.com/data/icons/small-n-flat/24/pencil-256.png","id":4}]

@@ -1,5 +1,5 @@
 const express = require("express");
-const db = require("./contenedor.js")
+const db = require("../contenedor.js")
 const app = express()
 
 const DB = new db("data")

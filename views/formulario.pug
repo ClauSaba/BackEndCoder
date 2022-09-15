@@ -1,0 +1,18 @@
+html 
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet" href="./css/styles.css")
+        title Formulario
+
+    body(class="bodyFormulario")
+        nav(class="navFormulario")
+            a(href="./formulario") Formulario
+            a(href="./vistaProductos" ) Listado de Productos
+        h2(class="tituloFormulario") Ingresar nuevo producto
+        form(class="formFormulario" action="/formulario" method="POST")
+            input(type="text" name="title" placeholder="title")
+            input(type="number" name="price" placeholder="price")
+            input(type="text" name="thumbnail" placeholder="thumbnail")
+            button(type="submit") Enviar

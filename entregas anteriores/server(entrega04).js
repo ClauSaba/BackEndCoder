@@ -1,7 +1,7 @@
 const { urlencoded } = require('express');
 const express =  require ('express');
 const app = express();
-const productosRouter = require('./productos')
+const productosRouter = require('../productos')
 
 app.use(express.json())
 app.use(urlencoded({ extended: true }))
