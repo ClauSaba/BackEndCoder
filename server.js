@@ -2,21 +2,26 @@ const { urlencoded } = require('express');
 const express =  require ('express');
 const fs = require ('fs');
 const db = require("./contenedor")
-const ejs = require('ejs')
+const handlebars = require('express-handlebars')
 const app = express();
 const DB = new db("datos")
-const productosRouter = require('./productos')
 const cont = require('./contenedor')
 
 app.use(express.json())
 app.use(urlencoded({ extended: true }))
-
-app.use('/productos', productosRouter)
 app.use('/contenedor', cont)
-
 app.use(express.static(__dirname + '/public'))
-
 app.use(express.static('datos'))
+
+app.engine(
+    'hbs',
+    handlebars.engine({
+        extname: ".hbs",
+        defaultLayout: "index.hbs",
+        layoutsDir: __dirname + '/views/',
+    }),
+
+    )
 
 app.get('/formulario',  (req, res)=>{
     res.render('formulario', {layout:"formulario"})
@@ -31,9 +36,13 @@ app.get('/producto/:id',async (req, res)=>{
     const {id} = req.params
     try{ 
     const Producto = await DB.getById(id)
+    if(Producto){ 
     res.render('producto', {layout:"producto", ...Producto})
+    }else{
+    return res.render('error',{layout: "error"})
+    }
 }catch(e){
-    return res.render('error', {layout:"error"})
+    return res.render("error", {layout:"error"})
 }
 })
 
@@ -46,10 +55,17 @@ app.post('/formulario', async(req, res)=>{
     console.log(data);
 })
 
+app.get('/chat',async (req, res)=>{
+    res.render('chat', {layout:"chat"})
+})
+
 app.set('views', './views')
-app.set('view engine', 'ejs')
+app.set('view engine', 'hbs')
+
+
 
 const server = app.listen(8080, ()=>{
     console.log(`server iniciado en puerto ${server.address().port}`)
 })
 server.on('error', error => console.log(`${error}`))
+

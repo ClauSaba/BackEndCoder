@@ -1,1 +1,0 @@
-{"title":"teclado","price":100,"thumbnail":"http://teclado.com/image.jpg","id":1}
