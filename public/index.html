@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=}, initial-scale=1.0">
-    <title>Formulario Router y Multer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AppBack</title>
 </head>
 <body>
     <h1>Bienvenidos a AppTienda</h1>
@@ -14,8 +14,20 @@
     <div>
         Para ver todos los productos => <a href="/vistaProductos">Lista Productos</a>
     </div>
-    
-    
+    <div>
+        Para ver chat => <a href="/chat">chat</a>
+    </div>
+
+    <h1>Centro de Mensajes</h1>
+    <form onsubmit="return enviarMensaje(this)" >
+        <input type="email" name="email" id="email" placeholder="introduce tu mail">    
+        <input type="text" name="msj" id="msj" placeholder="introduce tu mensaje">
+        <input type="submit" placeholder="Enviar">
     </form>
+    <div id="mensajes"></div>
+
+    <script src="socket.io/socket.io.js"></script>
+    <script src="index.js"></script>
+   
 </body>
 </html>

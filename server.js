@@ -6,12 +6,32 @@ const handlebars = require('express-handlebars')
 const app = express();
 const DB = new db("datos")
 const cont = require('./contenedor')
+const {Server: HTTPServer} = require('http')
+const {Server: SocketServer} = require('socket.io')
+
+const httpServer = new HTTPServer(app)
+const io = new SocketServer(httpServer)
+const Mensajes = [
+    {autor:"pepe", msj: "hola a todos"},
+    {autor:"pepa", msj: "hola a pepe"}
+]
 
 app.use(express.json())
 app.use(urlencoded({ extended: true }))
 app.use('/contenedor', cont)
 app.use(express.static(__dirname + '/public'))
 app.use(express.static('datos'))
+
+io.on('connection', (socket)=>{
+    console.log(`conectado: ${socket.id}`)
+    socket.emit('mensajes', Mensajes)
+
+    socket.on('nuevoMensaje',(data)=>{
+        console.log(data);
+        Mensajes.push(data)
+        io.sockets.emit('mensajes', Mensajes)
+    })
+})
 
 app.engine(
     'hbs',
@@ -62,10 +82,7 @@ app.get('/chat',async (req, res)=>{
 app.set('views', './views')
 app.set('view engine', 'hbs')
 
-
-
-const server = app.listen(8080, ()=>{
+const server = httpServer.listen(8080, ()=>{
     console.log(`server iniciado en puerto ${server.address().port}`)
 })
 server.on('error', error => console.log(`${error}`))
-
