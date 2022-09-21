@@ -1,0 +1,12 @@
+<div class="m-5">
+    <h1>Centro de Mensajes</h1>
+    <form onsubmit="return enviarMensaje(this)" >
+        <input type="email" name="email" id="email" placeholder="introduce tu mail">    
+        <input type="text" name="msj" id="msj" placeholder="introduce tu mensaje">
+        <input type="submit" placeholder="Enviar">
+    </form>
+    <div id="mensajes"></div>
+</div>
+<script src="socket.io/socket.io.js"></script>
+<script src="index.js"></script>
+    

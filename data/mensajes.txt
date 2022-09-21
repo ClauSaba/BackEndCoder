@@ -1,0 +1,2 @@
+[{"autor":"pepe@gmail.com", "msj": "hola a todos"},
+{"autor":"pepa@hotmail.com", "msj": "hola pepe"}]

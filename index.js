@@ -4,10 +4,10 @@ function render (data){
     const html = data.map(mensaje => `
     <div>
         <span style="color: blue">${mensaje.autor}:</span>
-        <span style="color: red">${new Date()}</span>
+        <span style="color: brown">${new Date()}:</span>
         <span style="color: green">${mensaje.msj}</span>
     </div>
-    `)
+    `).join(" ")
     document.getElementById("mensajes").innerHTML = html
 }
 const socket = io.connect()
@@ -23,3 +23,4 @@ function enviarMensaje(event){
 socket.on('mensajes', (data) =>{
     render(data)
 })
+

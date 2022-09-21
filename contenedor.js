@@ -89,7 +89,35 @@ class Contenedor {
             console.log("no se encontro busqueda");
         }
     }
+    async saveMsg(objUser){
+        try{ 
+        const data = await fs.promises.readFile("./data/mensajes.txt", "utf-8");
+        const msg = JSON.parse(data);
+        const id = msg.length + 1; 
+        objUser.id = id;
+        console.log(id);
+        users.push(objUser)
+        const stringMsg = JSON.stringify(msg)
+        await fs.promises.writeFile("./data/productos.txt", stringMsg)
+        return users
+        }catch{
+            console.log("error");
+        }
+    }
+    async getAllMsg(){
+        try{ 
+            const data = await fs.promises.readFile("./data/productos.txt", "utf-8");
+            const dataparseada = JSON.parse(data);
+            return dataparseada
+        }catch{
+            console.log("no se encontro busqueda getAll");
+        }
+    }
+    
+
 }
+
+
                             
 const contenedor = new Contenedor('data')
 
