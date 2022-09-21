@@ -4,17 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>chat</title>
+    <title>AppBack</title>
 </head>
 <body>
     <h1>Centro de Mensajes</h1>
-    <input type="email" name="email" id="email" placeholder="introduce tu mail">
-    <div class="mensajes">
-        mail azul, timestamp rojo, msj verde
-    </div>
-    <input type="text" name="msj" id="msj" placeholder="introduce tu mensaje">
-    <input type="submit" value="Enviar">
+    <form onsubmit="return enviarMensaje(this)" >
+        <input type="email" name="email" id="email" placeholder="introduce tu mail">    
+        <input type="text" name="msj" id="msj" placeholder="introduce tu mensaje">
+        <input type="submit" placeholder="Enviar">
+    </form>
+    <div id="mensajes"></div>
+
     <script src="socket.io/socket.io.js"></script>
-    <script src="server.js"></script>
+    <script src="index.js"></script>
+   
 </body>
 </html>
