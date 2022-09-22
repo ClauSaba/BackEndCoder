@@ -12,8 +12,8 @@ const {Server: SocketServer} = require('socket.io')
 const httpServer = new HTTPServer(app)
 const io = new SocketServer(httpServer)
 const Mensajes = [
-    {autor:"pepe", msj: "hola a todos"},
-    {autor:"pepa", msj: "hola a pepe"}
+    {autor:"pepe@gmail.com", msj: "hola a todos"},
+    {autor:"pancho@gmail.com", msj: "hola pepe"}
 ]
 
 app.use(express.json())
@@ -43,40 +43,17 @@ app.engine(
 
     )
 
-app.get('/formulario',  (req, res)=>{
-    res.render('formulario', {layout:"formulario"})
-})
-
-app.get('/vistaProductos',async (req, res)=>{
+app.get('/index', async (req, res)=>{
     const Productos = await DB.getAll()
-    res.render('vistaProductos', {layout:"vistaProductos", Productos})
-})
-
-app.get('/producto/:id',async (req, res)=>{
-    const {id} = req.params
-    try{ 
-    const Producto = await DB.getById(id)
-    if(Producto){ 
-    res.render('producto', {layout:"producto", ...Producto})
-    }else{
-    return res.render('error',{layout: "error"})
-    }
-}catch(e){
-    return res.render("error", {layout:"error"})
-}
+    res.render('index', {layout:"index", Productos})
 })
 
 // agrega un producto y lo devuelve con su id
-app.post('/formulario', async(req, res)=>{
+app.post('/index', async(req, res)=>{
     const {title, price, thumbnail} = req.body
     const data = await DB.save({title, price, thumbnail})
     const Productos = await DB.getAll()
-    res.render('vistaProductos', {layout:"vistaProductos", Productos})
-    console.log(data);
-})
-
-app.get('/chat',async (req, res)=>{
-    res.render('chat', {layout:"chat"})
+    res.render('index', {layout:"index", Productos})
 })
 
 app.set('views', './views')

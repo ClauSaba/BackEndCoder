@@ -6,21 +6,36 @@ class Contenedor {
         this.file = file;
     } 
     //fs crear objeto (title, price, thumbnail, id)y devolver el id asignado
-        async save(objUser){
-            try{ 
-            const data = await fs.promises.readFile("./data/productos.txt", "utf-8");
-            const users = JSON.parse(data);
-            const id = users.length + 1; 
-            objUser.id = id;
-            console.log(id);
-            users.push(objUser)
-            const stringUsers = JSON.stringify(users)
-            await fs.promises.writeFile("./data/productos.txt", stringUsers)
-            return users
-        }catch{
-            console.log("error");
-        }
-        }
+    async save(objUser){
+        try{ 
+        const data = await fs.promises.readFile("./data/productos.txt", "utf-8");
+        const users = JSON.parse(data);
+        const id = users.length + 1; 
+        objUser.id = id;
+        users.push(objUser)
+        const stringUsers = JSON.stringify(users)
+        await fs.promises.writeFile("./data/productos.txt", stringUsers)
+        return users
+    }catch{
+        console.log("error");
+    }
+    }
+
+    //fs crear objeto en index (title, price, thumbnail, id)y devolver el id asignado
+    async saveIndex(objUser){
+        try{ 
+        const data = await fs.promises.readFile("./data/productos.txt", "utf-8");
+        const users = JSON.parse(data);
+        const id = users.length + 1; 
+        objUser.id = id;
+        users.push(objUser)
+        const stringUsers = JSON.stringify(users)
+        await fs.promises.writeFile("./data/productos.txt", stringUsers)
+        return users
+    }catch{
+        console.log("error");
+    }
+    }
     
     // traer objeto por id y mostrarlo por pantalla
         async getById(id){
