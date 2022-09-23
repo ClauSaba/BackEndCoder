@@ -1,0 +1,21 @@
+<div class="bodyVista">
+    <h1 class="tituloFormulario">Listado de Productos</h1>
+    <table class="tablaProductos">
+<thead>
+    <tr class="tituloColumnas">
+        <th scope="col">Nombre</th>
+        <th scope="col">Precio</th>
+        <th scope="col">Foto</th>
+    </tr>
+</thead>
+<tbody>
+    {{#each Productos}}
+        <tr>               
+            <td scope="row">{{this.title}}</td>
+            <td scope="row">{{this.price}}</td>
+            <td scope="row"> <img src="{{this.thumbnail}}" alt=""> </td>
+        </tr>
+    {{/each}}             
+</tbody>
+    </table> 
+</div>

@@ -27,7 +27,6 @@ io.on('connection', (socket)=>{
     socket.emit('mensajes', Mensajes)
 
     socket.on('nuevoMensaje',(data)=>{
-        console.log(data);
         Mensajes.push(data)
         io.sockets.emit('mensajes', Mensajes)
     })
