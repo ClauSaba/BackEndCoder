@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Productos</title>
+</head>
+<body class="bodyFormulario" >
+    <nav class="navFormulario">
+        <a href="./formulario">Formulario</a>
+        <a href="./vistaProductos">Listado de Productos</a>
+    </nav>
+    <h1 class="tituloFormulario">Listado de Productos</h1>
+    <table class="tablaProductos">
+        <thead>
+            <tr class="tituloColumnas">
+                <th scope="col">Nombre</th>
+                <th scope="col">Precio</th>
+                <th scope="col">Foto</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% Productos.forEach(producto => { %>
+                <tr>           
+                    <td scope="row"> <%= producto.title %> </td> 
+                    <td scope="row"> <%= producto.price %> </td> 
+                    <td scope="row"> <img src= <%= producto.thumbnail %> alt=""> </td> 
+                </tr> 
+            <% }) %>
+        </tbody>
+    </table>    
+</body>
+</html>
