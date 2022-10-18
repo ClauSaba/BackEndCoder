@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="./index.js"></script>
+    <title>tiendaBack</title>
+</head>
+<body class="body" >
+    <div class="formYvista">
+        <div class="bodyForm">
+            <h2 class="tituloFormulario">Ingresar nuevo producto</h2>
+            <form class="formFormulario" action="/index" method="POST" >
+            <input type="text" name="title" placeholder="Producto">
+            <input type="text" name="price" placeholder="Precio">
+            <input type="text" name="thumbnail" placeholder="URL foto">
+            <button type="submit">Enviar</button>
+            </form>
+        </div>
+        <div class="bodyVista">
+            <h1 class="tituloFormulario">Listado de Productos</h1>
+            <table class="tablaProductos">
+        <thead>
+            <tr class="tituloColumnas">
+                <th scope="col">Nombre</th>
+                <th scope="col">Precio</th>
+                <th scope="col">Foto</th>
+            </tr>
+        </thead>
+        <tbody>
+            hacer un loop productos
+                <!-- <tr>               
+                    <td scope="row">{{this.title}}</td>
+                    <td scope="row">{{this.price}}</td>
+                    <td scope="row"> <img src="{{this.thumbnail}}" alt=""> </td>
+                </tr> -->
+                        
+        </tbody>
+            </table> 
+        </div>
+    </div>
+    <div class="centroMensajes">
+        <div class="form">
+        <h1>Centro de Mensajes</h1>
+        <form class="form" onsubmit="return enviarMensaje(this)">
+            <input type="email" name="email" id="email" placeholder="introduce tu mail">    
+            <input type="text" name="msj" id="msj" placeholder="introduce tu mensaje">
+            <input type="submit" placeholder="Enviar">
+        </div>
+        <div id="mensajes"></div>
+    </div>
+        
+    <script type="module" src="socket.io/socket.io.js"></script>
+    <script type="module" src="../index.js"></script>
+</body>
+</html>
+

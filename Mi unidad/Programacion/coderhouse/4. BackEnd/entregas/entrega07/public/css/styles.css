@@ -1,0 +1,124 @@
+*{
+    margin: auto;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: darkgrey;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+
+
+.bodyFormulario{
+    height: 100px;
+    width: 500px;
+}
+.navFormulario{
+    height: 100px;
+    width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    color: red;
+    font-size: 22px;
+    border: black solid 5px;
+    margin-bottom: 20px;
+    background-color: white;
+}
+
+.tituloFormulario{
+    padding: 0 0 10px 10px;
+}
+
+.navFormulario, .tituloFormulario a{
+    text-decoration: none;
+    color: white;
+}
+
+.tituloFormulario{
+    text-align: center;
+    font-weight: bolder;
+    font-size: 30px;
+    color: blue;
+}
+
+.formFormulario{
+    height: 300px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: solid black 5px;
+    border-radius: 0 55px 0 55px;
+    padding: 20px 0;
+    background-color: white;
+}
+
+.formFormulario input{
+    font-size: 16px;
+    color: white;
+    background-color: black;
+    border: red solid 3px;
+}
+
+.tablaProductos{
+    width: 500px;
+    border: black solid 3px;
+}
+
+.tituloColumnas{
+    text-align: center;
+    color: black;
+    background-color: white;
+    font-size: 18px;
+}
+
+td{
+    width: 150px;
+    border: black 3px solid;
+    text-align: center;
+}
+
+td img{
+    width: 50px;
+    height: 50px;
+}
+
+.tarjeta{
+    height: 300px;
+    width: 400px;
+    border: red solid 5px;
+    border-radius: 0 55px 0 55px;
+    color: white;
+    background-color: black;
+}
+
+.formYvista{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.centroMensajes{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 95vw;
+    margin: 20px;
+    padding: 20px;
+    border: black solid 5px;
+    border-radius: 0 55px 0 55px;
+    color: white;
+    padding: auto;
+
+
+}
+
+.form{
+display: flex;
+flex-direction: column;
+}
