@@ -1,0 +1,16 @@
+const firebaseConfig =
+
+{
+  type: "service_account",
+  project_id: "interquesos",
+  private_key_id: "08ecb05eb0e7cc191d1545fb5a606352367c38c4",
+  private_key: "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC6eLx+NcTe3SgV\nS3ZyKBIwgC1EgZl56Z1PgVP5bMBlBL7IYqekGJeWlfgYfsaNx/2mW9y+5MTid9Mz\nYu7TxflHJXxGfst1XLL83B1dVVlZIGPatt8ZtAP11YDiZwYpNj07U3dp42upqdbf\nnERxoil3YD0KayIuZjuKPGELLSIIzY+gItjhad4MboMZwmN1rfbMmstGARiJt49P\nnHbu0qf3z0TvsZMwy4TZ3pZQk2zYfo3Et7WBl6T1SqYRxus02F5lRJKF2mwarirQ\nsMckaOWKv1jpbS0af1V6IJtdz9AsqZf8PvQsHQfDOySNbadYl9Hib94c0qYGMoZ9\nRIVTJE3XAgMBAAECggEACjNKlFjaoRpV8/xByXLZs99/Gm1AeQPHgC7h6hYB3ETL\nLuj+pKJXwHwJq0VcFStoe64wwByBjKXjXr89s0X0IekyCCUtegkNHXno/U8K6S41\naCRyxdQsF0mLmFbsZlq6NMGXGarAG/LXdzn0IIcvX4FbNXOw1frvrNsqr9LTNsn3\n9iuu1SCcr4mSdy5nIlZWDfpQrFH5NTSHo4aTE2vt2ODTOpSEaUz+X0ydh1PDYH61\nYY8YelRWWFj919V/2HB/l4IbOjf4zlvzbVlOyOgogt1KeTl3c5zBj5Ox2OZh4VT3\nCWDx+BDbtIXjJIDqo9n64/ydUfaV4jKFRv3Fo+2gOQKBgQDeGyH6Gu8Hy5Xz7RBa\ncGdHQqlJK9uNGC9ek8fZp+4DAvySzqsflgUrrJn49zRYw5nezu7ygU8cA+HsRunG\n94UxyO68qRG/LOH7CioAbXp2hQOJHo8ZTls8Wvw/qBrh6UlhqEM3aj/jAlhvnd+N\nE3wYCZqXBUpxaWXXyZvcXcrUgwKBgQDW7X/n7d2bwkqZQsUmdaPGS7hVtkVtOZD8\nGgDYQsBHNeZTVz4UW8Nxpinri7GTmVmo3wrP5U3XqGfIqGuf7Hc7v7RBqpHCr1UX\nnjMTZGMV5x0Lz3EhgJNpbr6SFKnzEWac2KlzIllpNQZvWxegGzfzZ51Fesv7tx7X\nAtj1YxXpHQKBgBAIj2RZq2W5qaKJO4P710jKpCPXGatO0qSWMHgi6kinX4pNhwbp\nsofbluXlGo9J14LBF3jEIuzXzuhamie12JSmd62A2vodCFcx/aQ4Qv3pTj8IyLW/\n9VAfFVSXExG54IU/O1L1xZTip3WvROMPRAcMMm+yfxQ+0o5ITIsU7j53AoGACyxX\nnOgJwEIufJ8y/pfZBsMC9zm9jDsU5XY4mwWFV25e5fBAIvDOTUc1ILCnb6PmPFg0\nCLDEBjUUCCNxTOQPIsUJiuxiHXvd8Zdg0l5CpG3aXbXQDMzRXQbL025Nk3xRGFBP\nJtQfT8/Y4MschE9F7lpxm54RoqlXahgUzVT0W6UCgYEAzn5B/Y1/+/vxec4s3UoN\n1zZcaQ/e33nXso7Vt1JNIMcvNikRlJVPObSwfg6gI04Png8ZA9k2Bs6karQYDDwh\nZGXIitPEsF4y9E96UzueGjPpLPF9FtxqMFDzJlRAd3al+Jk0y0vDx4AJYs2yJMNg\n497CTJ1QDUt8fN0kbdG2QcE=\n-----END PRIVATE KEY-----\n",
+  client_email: "firebase-adminsdk-x82qx@interquesos.iam.gserviceaccount.com",
+  client_id: "105379509563092948995",
+  auth_uri: "https://accounts.google.com/o/oauth2/auth",
+  token_uri: "https://oauth2.googleapis.com/token",
+  auth_provider_x509_cert_url: "https://www.googleapis.com/oauth2/v1/certs",
+  client_x509_cert_url: "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-x82qx%40interquesos.iam.gserviceaccount.com"
+}
+
+export default firebaseConfig
