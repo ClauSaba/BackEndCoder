@@ -1,0 +1,15 @@
+const FirebaseDetails =
+{
+  type: "service_account",
+  project_id: "mitiendaback",
+  private_key_id: "2f0ebffe041ae1f68f748ae38e71ec26c3ff0906",
+  private_key: "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQC3ymyZgwcwNa3Z\npcdyiN7/JcLtO2MSe/n2Nw+XaVTTED0n+0Wog0BSpUo8fuLXnIQKafKLg+AN6+on\ndik9VX38VRahHsUkRliXCUdPS1HA2TCW9/lOqVHsDCuB6/Hfz+FH74iN5Vm+EnuG\npkpjEwAoKOESG3sMsmhm50IxPeV5pK9gqaNSdfFvv5gUcB+36T6jwrpRcbxBcyUJ\nPqO2yBB81AlMUDFPwiAzaGfBKQfi5Vu2fMOmIPxxOWv3aG2VsUHCzJxIT8GQbcWe\nXX8yfhhDqalx2K4ug0h8rw3E+hbiBeZd82ow2gjDsE7oh4VvMjNzuooOTnR3qu0H\nPZy7SmejAgMBAAECggEAHg/CjqNzaAvHqVtn0ZCYpPQou4Pksw/LNV4RM0tbwAAe\neK0tWiBJw5rclyOL+AdWQ5vLu80wtyY40QaPPUSADGdgga8WQNYuxFmUq+AeeaQs\nwezCfv7L8weUkDYnBFwstYb093ylnqTIRqBpd2YStv7kvYD4Mf32fKpj1ckRgUFL\nFRJp9NltPi4IOH7TOJHNHy7K2XlE0ZANlOkSlHgTeyjT4cluwx2le6wLr6MXnpYr\nWvgcAeXsGWRR2st8q2x329vKE0DOuIrMcIHG5M/K7yrH12ICG9mPM5HK6RDa1+/7\nEJ8flE3gv5V5wIq8G7Pq/xG1P6imqXnGHR9jRI1whQKBgQDiuHH1mxUqQ8nmKAS0\nQZ/CQWIXTjgLu62K6YqswxYvmZC5u2CmYuxtWz78kIzJYSN4nh2yvlKZMhrjxgbE\nOuQXOY6dIVTAQlC0bDxIvt+TSZ/eqNQmYrHBBvLFvmkzzQ9rC2vijfxbWrUl7BTn\nLSy+uYE0MXjO/q7VEiHiQQfItQKBgQDPhrAKrnkTUOXvelwF2Q+wBFVXBs4GGEDg\nQNvrQsaAY1hZf4rVE6H+ClAM/v1LFpfeXQIbZr06jnrpmolUdRR4XuiGj4BosVFV\nLgRUhD+VcbFDLlPXgThNiB/haMj8wnrGP7G2SnT0b2lwFOEIHXUxmKQyzrX+1b4q\nija3piZd9wKBgQCvgrXFuk6CL4QmxigOGxc/3DnBbO36N0m7VdvirguIwcrF3YaO\nh9obNh3mi0hRxP8eqti2vJtYuO8UEQK/+g8E46vBfEINq8iqQ3fPoOOXM9GtHulM\n5e5RTb220xbB4SbkaS0Vb3FCj0/YkZAE/nW7GAQrkXjCVWqmy6irbEhIWQKBgBN3\nyyP1Yh5RxIBGtkNGLZaRkX/sf39K3ysqancTeJOqvisHL/r1MIkoZoIRmalloTGX\nAA+Z/75yh01K1f86TIVOQfn9lEo9+CdJfdZ/4Ycfd0WaHvtkf+emEXeP4Or1Q5c9\nempjab1UhkuhacrdGJVigGTTx3b0jjZnaOKpj4fZAoGBAJbr26qRdMUuvg9umvxg\ngKOGDFR34OOpcvl/tFcz+mkKkQtjtLFBSYi7fyQf00FcJUATIcSZ0GhJK+m3pJMQ\nwsGPmVXdyeTSxp2fXNuzF9jGtPGNC+m+fx9HM4KR+1eT/cXMVMmwNsZkTnvxJKyg\nutBqyMXRVI7poINulDufXz6Z\n-----END PRIVATE KEY-----\n",
+  client_email: "firebase-adminsdk-hx8e5@mitiendaback.iam.gserviceaccount.com",
+  client_id: "100072997787600725750",
+  auth_uri: "https://accounts.google.com/o/oauth2/auth",
+  token_uri: "https://oauth2.googleapis.com/token",
+  auth_provider_x509_cert_url: "https://www.googleapis.com/oauth2/v1/certs",
+  client_x509_cert_url: "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-hx8e5%40mitiendaback.iam.gserviceaccount.com"
+}
+
+export default FirebaseDetails
