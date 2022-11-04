@@ -7,3 +7,7 @@ export default {
         databaseURL:'https://mitiendaback.firebaseio.com'
     }
 }
+
+/*
+    Dentro de este objeto tambien podrias tener la info de FirebaseDetails.js
+*/
